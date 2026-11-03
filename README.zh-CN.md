@@ -69,7 +69,7 @@ LLLooooo oooooooo           ; back reference, L+2 octets, offset o+1
 
 [完整 Scribble API 手册](lzf/scribblings/lzf.scrbl)说明公开契约、
 确定性编码、输出缓冲增长、错误输入及字节格式。文档示例在构建时执行。
-[独立可运行示例](examples/quickstart.rkt)验证压缩/解压往返、
+[独立可运行示例](lzf/examples/quickstart.rkt)验证压缩/解压往返、
 `#:hint 0` 时的缓冲增长、重复输入输出确定性和空字节串，
 无需安装任何 liblzf 系统库。
 
@@ -78,7 +78,7 @@ LLLooooo oooooooo           ; back reference, L+2 octets, offset o+1
 ```sh
 raco pkg install --auto --link "$(pwd)"
 raco test -p lzf
-racket examples/quickstart.rkt
+racket lzf/examples/quickstart.rkt
 raco setup --check-pkg-deps -l lzf
 ```
 
