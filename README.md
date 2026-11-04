@@ -75,7 +75,7 @@ into position 0.
 The [Scribble API reference](lzf/scribblings/lzf.scrbl) describes the public
 contracts, deterministic encoding, buffer growth, invalid input and wire
 format. The manual's examples are evaluated while the docs are built.
-The [standalone quickstart](examples/quickstart.rkt) verifies compression,
+The [standalone quickstart](lzf/examples/quickstart.rkt) verifies compression,
 round-trip decompression, explicit `#:hint 0` buffer growth, deterministic
 output and empty byte strings without needing any liblzf installation.
 
@@ -84,7 +84,7 @@ From the repository root, with Racket and `raco` installed:
 ```sh
 raco pkg install --auto --link "$(pwd)"
 raco test -p lzf
-racket examples/quickstart.rkt
+racket lzf/examples/quickstart.rkt
 raco setup --check-pkg-deps -l lzf
 ```
 
